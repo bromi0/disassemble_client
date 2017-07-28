@@ -1,0 +1,6 @@
+<utils-button-value *ngFor="let value of steps.slice().reverse()" [value]="-value" (changed)="onValueChange($event)"></utils-button-value>
+<md-input-container>
+  <input mdInput [(ngModel)]=value type="number" filterNumberOnly (blur)="onValueChange(0)">
+  <md-error>This field is required</md-error>
+</md-input-container>
+<utils-button-value *ngFor="let value of steps" [value]="value" (changed)="onValueChange($event)"></utils-button-value>
